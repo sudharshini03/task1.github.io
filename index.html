@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/289976bb91.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <img src="logo.png" class="logo" style="border-radius: 30%;">
+            <ul>
+                <li><a href="#header"><strong>Home</strong></a></li>
+                <li><a href="#about"><strong>About</strong></a></li>
+                <li><a href="#services"><strong>Spotlight</strong></a></li>
+                <li><a href="#projects"><strong>Project</strong></a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Front-End Web Developer</p>
+            <h1>Heyya!  I'm <span>Sudharshini</span><br>from Chennai</h1>
+        </div>
+    </div>
+</div>  
+<!-- ----about-- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="mypic.jpeg" style="width: 300px;">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About<span style="color: #ff004f;"> Me</span></h1>
+                <p><br>Hello there! I'm Sudharshini, a passionate front-end web developer with a keen interest in creating engaging and user-friendly digital experiences. My journey in the world of web development began with a fascination for turning ideas into visually appealing and functional websites.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')"><strong>Skills</strong></p>
+                    <p class="tab-links" onclick="opentab('experience')"><strong>Experience</strong></p>
+                    <p class="tab-links" onclick="opentab('education')"><strong>Education</strong></p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Html Css Js Bootstrap<br>UI/UX</li>
+                        <li><span>Programming Languages</span><br>Java<br>Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Dec'23 - Jan'24</span><br>Web Development Internship at Motioncut </li>
+                        <li><span>Aug'23 - Oct'23</span><br>Internship at TVS-E</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - Current</span><br>B.Tech at VIT Chennai</li>
+                        <li><span>2019 - 2021</span><br>Higher Secondary Education at Velammal Vidhyashram</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<!-- ------services-- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"><span style="color: #4da5e0;">Capabilities</span> Spotlight</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Crafting visually stunning and user-centric web experiences through innovative design and thoughtful aesthetics.</p>
+                
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX</h2>
+                <p>Elevating digital interactions with intuitive and user-centered UI/UX design for a seamless and engaging experience.</p>
+                
+            </div>
+            <div>
+                <i class="fa-regular fa-file"></i>
+                <h2>Resume</h2>
+                <p>Dynamic resume spotlighting skills, experiences, and achievements in the tech and innovation realm.</p>
+                <a href="Resumee.pdf" download target="_blank" style="color: #4da5e0;">Download Cv</a>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!-- ----projects--- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My <span style="color: #ff004f;">Work</span></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="img1.png">
+                <div class="layer"><br>
+                    <h3>E-commerce Website</h3>
+                    <p>A simple E-commerce responsive website using HTML,CSS and JS</p>
+                    <a href="https://sudharshini03.github.io/task3.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>    
+                </div>
+            </div>
+            <div class="work">
+                <img src="img2.png"><br>
+                <div class="layer"><br>
+                    <h3>Registration Form</h3>
+                    <p>A straightforward registration form created using a combination of HTML, CSS, and JavaScript</p>
+                    <a href="https://sudharshini03.github.io/tasktwo.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img3.png"><br>
+                <div class="layer"><br>
+                    <h3>Restaurant Website</h3>
+                    <p>A snapshot of a restaurant's digital presence, meticulously crafted solely with HTML and CSS</p>
+                    <a href="https://sudharshini03.github.io/website1.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+
+}
+</script>
+</body>
+</html>
